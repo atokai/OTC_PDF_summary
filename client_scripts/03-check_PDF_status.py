@@ -1,8 +1,9 @@
 import requests
 import sys
+import os
 
 #API URL for the status requests
-API_URL = "https://79a4b56528914fb5aa0f8f17f38ae9b4.apic.eu-de.otc.t-systems.com/PDF_Status"
+API_URL = os.environ.get("PDF_Status_API_URL")
 
 def check_status(api_url, task_id):
     """Checks the status of a PDF processing task by task_id."""
